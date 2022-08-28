@@ -1,0 +1,18 @@
+<%- include("./partials/header") %>
+<%- include("./partials/nav-login") %> 
+<div class="container addForm">
+    <form action="/question/edit/<%= result._id %>" method="POST">
+        <div class="mb-3">
+          <label for="exampleInputEmail1">Title</label>
+          <input type="text" name="title" value="<%= result.title %>">
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1">Question</label>
+          <input type="text" name="message" value="<%= result.message %>">
+        </div>
+        <a href="/question/<%= result._id%>" class="btn btn-secondary">Cancel</a>
+        <button type="submit" class="btn btn-primary">Save</button>
+    </form>
+</div>
+
+<%- include("./partials/footer") %>

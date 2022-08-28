@@ -1,0 +1,17 @@
+
+<% if (result.length> 0 ) {%>
+  <% result.forEach(element=> { %>
+
+    <div class="card">
+        <div class="card-body">
+          <h5 class="card-title"><%= element.title %></h5>
+          <p class="card-text"><%= element.message %></p>
+          <p><%= element.createdAt.toLocaleDateString() %></p>
+          <a href=/question/<%= element._id%> class="card-link">See More</a>
+        </div>
+    </div>
+  <% }); %>
+    <% } else { %>
+      <p class="noQuestion">there is no questions adding yet....</p>
+    <% } %>
+

@@ -1,0 +1,14 @@
+<%- include("./partials/header") %>
+<% if(cookies){ %>
+<%- include("./partials/nav-login") %> 
+<% } else { %>
+<%- include("./partials/nav") %> 
+<% } %>
+<h1 class="site-tilte">Matrix Master Community</h1>
+
+
+<%- include("./partials/formAdd.ejs") %> 
+
+<%- include("./partials/card") %> 
+
+<%- include("./partials/footer") %>
